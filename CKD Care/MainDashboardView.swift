@@ -153,13 +153,15 @@ struct MainDashboardView: View {
                             }
                             .tag(3)
                             
-                            // Profile Tab
-                            profileView
-                                .tabItem {
-                                    Image(systemName: "person.fill")
-                                    Text("Profile")
-                                }
-                                .tag(4)
+                // Profile Tab
+                    NavigationView {
+                        ProfileView()
+                    }
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("Profile")
+                    }
+                    .tag(4)
                         }
             .accentColor(.blue)
             .onAppear {
